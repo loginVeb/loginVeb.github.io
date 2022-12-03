@@ -16,7 +16,7 @@ const Home = () => {
   
   return (
     <SHome>
-      SHome 
+      Моё первое приложение 
     </SHome>
   );
 };

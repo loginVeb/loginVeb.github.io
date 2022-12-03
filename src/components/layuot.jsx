@@ -43,7 +43,7 @@ const Layout = () => {
 <SNavLink to="about">About</SNavLink>
 </Header>
 <Outlet/>
-<Footer>2022</Footer>
+<Footer>2023</Footer>
 </SLayout>
   );
 };
