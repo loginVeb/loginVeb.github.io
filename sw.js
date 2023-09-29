@@ -2,7 +2,7 @@ const staticCacheName = 'keyCache_v1';
 
 const fileUrl = [
   'index.html', 
-  '/server/app.js'
+  '/server/app.js',
   '/src/styledTheme.jsx', 
   '/src/main.jsx', 
   '/src/@media.js', 
@@ -17,7 +17,7 @@ const fileUrl = [
   '/src/components/pageForm/loyuotRegistrationLogin.jsx'
   ];
   
-self.addEventListener('install',event =>{
+self.addEventListener('install',async event =>{
   const cache = await cache.open(staticCacheName);
   await cache.addAll(fileUrl);
 });

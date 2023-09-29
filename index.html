@@ -1,14 +1,41 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <meta name="description" content="test pwa">
+    <link rel="icon" type="image/jpg" href="/assets/icons/icon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+    <base href="./">
+
+    <meta name="theme-color" content="##5a0fc8" />
+    
+    <link rel="icon" type="image/png" href="/assets/icons/icon_48x48.png" />
+    <link rel="icon" type="image/png" href="/assets/icons/icon_96x96.png" />
+    <link rel="icon" type="image/png" href="/assets/icons/icon_72x72.png" />
+    <link rel="icon" type="image/png" href="/assets/icons/icon_48x48.png" />
+    <link rel="icon" type="image/png" href="/assets/icons/icon_128x128.png" />
+    <link rel="icon" type="image/png" href="/assets/icons/icon_144x144.png" />
+    <link rel="icon" type="image/png" href="/assets/icons/icon_152x152.png" />
+    <link rel="icon" type="image/png" href="/assets/icons/icon_192x192.png" />
+    <link rel="icon" type="image/png" href="/assets/icons/icon_384x384.png" />
+    <link rel="icon" type="image/png" href="/assets/icons/icon_512x512.png" />
+    <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+    <link rel="manifest" href="./manifest.json" /> 
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script type="module">
+    if ('serviceWorker' in navigator) {
+      // Весь код регистрации у нас асинхронный.
+      navigator.serviceWorker.register('./sw.js')
+        .then(() => navigator.serviceWorker.ready.then((worker) => {
+          worker.sync.register('syncdata');
+        }))
+        .catch((err) => console.log(err));
+  }
+</script>
   </body>
 </html>
 <!-- 
