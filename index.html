@@ -2,12 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <base href="/">
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#5a0fc8" />
+    
+     <link rel="icon" href="/images/pwa/icon-72x72.png">
+     <link rel="icon" href="/images/pwa/icon-96x96.png">
+     <link rel="icon" href="/images/pwa/icon-128x128.png">
+     <link rel="icon" href="/images/pwa/icon-144x144.png">
+     <link rel="icon" href="/images/pwa/icon-152x152.png">
+     <link rel="icon" href="/images/pwa/icon-192x192.png">
+     <link rel="icon" href="/images/pwa/icon-384x384.png">
+    <link rel="icon" href="/images/pwa/icon-512x512.png">
+    <link rel="apple-touch-icon" href="/images/pwa/icon-192x192.png">
     <title>Vite App</title>
     <link rel="manifest" href="manifest.json" />
-    <!-- PWA: Apple Touch Icon, and Service Worker registration. --><!-- Vite Plugin PWA will add the Web App Manifest during build -->
-    <link rel="apple-touch-icon" href="/images/pwa/icon-192x192.png">
+    
     <script type="module">
       import { registerSW } from 'virtual:pwa-register';
       registerSW({ immediate: true });
