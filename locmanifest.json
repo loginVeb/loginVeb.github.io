@@ -2,7 +2,7 @@
   "name": "Vite PWA",
   "short_name": "Vite PWA",
    "start_url": "https://login-veb-github-io.vercel.app/",
-  "scope": "/",
+  "scope": "https://login-veb-github-io.vercel.app/",
   "lang": "Russian",
   "description": "test",
   "background_color": "#5a0fc8",
