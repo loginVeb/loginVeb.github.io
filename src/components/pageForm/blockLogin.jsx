@@ -75,7 +75,7 @@ const BlockLogin= () => {
   let [statePass, setStatePass] = React.useState([]);
 
 React.useEffect(()=>{
-  let data =  axios.get('http://localhost:3306/');
+  let data =  axios.get('http://localhost:3306/', {withcredentials:true });
   data.then((res) => {
     //console.log(res);
     setStateName(res.data );
