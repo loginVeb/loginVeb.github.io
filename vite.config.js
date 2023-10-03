@@ -31,7 +31,10 @@ export default defineConfig({
       srcDir: "",
       filename: "service-worker.js",
       manifest,
-     
+      devOptions: {
+        enabled: true,
+        type: 'module',
+      },
     }),
   ],
 });
