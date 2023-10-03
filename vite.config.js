@@ -31,6 +31,7 @@ export default defineConfig({
       srcDir: "",
       filename: "service-worker.js",
       manifest,
+     
     }),
   ],
 });
