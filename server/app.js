@@ -25,8 +25,8 @@ else{
 })
 
 
-app.listen(3003, () => {
-    //console.log('listening at http://localhost:3000');
+app.listen(3306, () => {
+    console.log('listening at http://localhost:3306');
 });
 
 

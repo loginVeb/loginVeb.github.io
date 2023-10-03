@@ -18,7 +18,7 @@ display:grid;
 grid-template-columns:repeat(12, 8.333%);  
 grid-template-rows:repeat(12, 8.333%);
 
-& h4{
+& h2{
   grid-area: 1/1/2/13;
   text-wrap:balance;
   max-inline-size:100ch;
@@ -75,7 +75,7 @@ const BlockLogin= () => {
   let [statePass, setStatePass] = React.useState([]);
 
 React.useEffect(()=>{
-  let data =  axios.get('http://localhost:3003/');
+  let data =  axios.get('http://localhost:3306/');
   data.then((res) => {
     //console.log(res);
     setStateName(res.data );
@@ -117,7 +117,7 @@ if (auth) {
   return (
  <SBlockLogin> 
    <SFormaLogin>
-   <h4>вход на сайт</h4>
+   <h2>вход на сайт</h2>
 
    <InputNik type='text' 
    placeholder="ведите ник" 
