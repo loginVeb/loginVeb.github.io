@@ -23,9 +23,10 @@ else{
     console.log('uraaa')
 }
 })
+const port = process.env.PORT || 3306;
 
 
-app.listen(3306, () => {
+app.listen(port, () => {
     console.log('listening at http://localhost:3306');
 });
 
