@@ -24,7 +24,7 @@ background: gold;
 
 const O_site = () => (
   <SO_site> 
-  <h1> чат окз </h1>
+  <h1>окз</h1>
 <p>О сайте.... 
 </p>
   </SO_site>

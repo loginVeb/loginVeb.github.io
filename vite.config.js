@@ -1,18 +1,16 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-//import mkcert from 'vite-plugin-mkcert';
+import { defineConfig } from "vite";
+import { VitePWA as pwa } from "vite-plugin-pwa";
 
 
+import manifest from "./manifest.json" assert { type: "json" };
+//import manifest from "./locmanifest.json";
+import react from "@vitejs/plugin-react";
+
+// https://vitejs.dev/config/
 export default defineConfig({
-
-  server: { 
-    //https: true,
-    port: 3000
-  },
-   
+    
   plugins: [
-   // mkcert(),
-    react({
+  react({
       babel: {
         plugins: [
           [
@@ -24,7 +22,16 @@ export default defineConfig({
           ]
         ]
       }
-    })
-  ]
-})
-// https://vitejs.dev/config/
+    })  ,
+    pwa({
+      strategies: "injectManifest",
+      srcDir: "",
+      filename: "service-worker.js",
+      manifest,
+      devOptions: {
+        enabled: true,
+        type: 'module',
+      },
+    }),
+  ],
+});
